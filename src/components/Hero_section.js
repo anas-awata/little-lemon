@@ -8,17 +8,24 @@ function Hero_section() {
   return (
     <HStack
       justifyContent="space-around"
-      alignItems="flex-start"
-      spacing="150px"
+      alignItems="center"
+      spacing={{ base: "50px", md: "150px" }}
       bg="primary_gray.50"
       marginTop="30px"
       padding="100px"
       paddingTop="30px"
+      flexDirection={{ base: "column", md: "row" }}
     >
       <Box>
-        <VStack gap="100px" alignItems="flex-start">
+        <VStack
+          gap={{ base: "50px", md: "100px" }}
+          alignItems={{ base: "center", md: "flex-start" }}
+        >
           <Box>
-            <VStack alignItems="flex-start" spacing={70}>
+            <VStack
+              alignItems={{ base: "center", md: "flex-start" }}
+              spacing={70}
+            >
               <Box>
                 <Text as="h1" color="primary_yellow.50" fontSize="6xl">
                   Little Lemon
@@ -46,11 +53,11 @@ function Hero_section() {
       </Box>
       <Box>
         <Image
-          boxSize="sm"
+          boxSize={{ base: "xs", md: "sm" }}
           borderRadius="30px"
           objectFit="cover"
           src={pic}
-          alt="chef"
+          alt="food"
           maxWidth="none"
         />
       </Box>

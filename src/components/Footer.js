@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../icons_assets/logo2.jpg";
-import { HStack, Text } from "@chakra-ui/react";
+import { HStack, Img, Text } from "@chakra-ui/react";
 import FooterNav from "./FooterNav";
 
 const links = [
@@ -53,7 +53,7 @@ export const Footer = () => {
       justifyContent="space-around"
       alignItems="flex-start"
     >
-      <img src={logo} alt="logo" />
+      <Img src={logo} alt="logo" display={{ base: "none", md: "inline" }} />
       <FooterNav links={links} title={"Navigation Doormat"} />
       <FooterNav links={links2} title={"Contact"} />
       <FooterNav links={links2} title={"Social Media"} />

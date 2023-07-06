@@ -11,6 +11,7 @@ function FooterNav({ links, title }) {
         alignItems: "center",
         flexDirection: "column",
         color: "#fff",
+        whiteSpace: "nowrap",
       }}
     >
       <li style={{ listStyle: "none" }}>

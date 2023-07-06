@@ -33,7 +33,7 @@ function Highlights() {
   return (
     <VStack padding={10} spacing={10}>
       <HStack justifyContent="space-around" width="100%">
-        <Text as="h1" fontSize="5xl">
+        <Text as="h1" fontSize={{ base: "xl", md: "5xl" }} fontWeight="bold">
           This Weeks Specials
         </Text>
         <Button
@@ -41,11 +41,16 @@ function Highlights() {
           color="primary_gray"
           variant="solid"
           borderRadius={16}
+          minWidth="fit-content"
         >
           Online Menu
         </Button>
       </HStack>
-      <HStack spacing={10} alignItems={"flex-start"}>
+      <HStack
+        flexDirection={{ base: "column", md: "row" }}
+        spacing={10}
+        alignItems={"flex-start"}
+      >
         {specials.map((special) => (
           <MyCard key={special.id} special={special}></MyCard>
         ))}

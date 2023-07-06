@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, HStack, VStack, Flex } from "@chakra-ui/react";
+import { Stack, HStack, VStack, Flex, UnorderedList } from "@chakra-ui/react";
 import logo from "../icons_assets/Logo .svg";
 import { useNavigate } from "react-router-dom";
 
@@ -41,13 +41,11 @@ export const Nav = () => {
           onClick={() => navigate("/")}
           style={{ cursor: "pointer" }}
         />
-        <ul
-          style={{
-            display: "flex",
-            gap: "30px",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+        <UnorderedList
+          display={{ base: "none", md: "flex" }}
+          gap="30px"
+          justifyContent="center"
+          alignItems="center"
         >
           {links.map((link) => (
             <li style={{ listStyle: "none" }} key={link.name}>
@@ -56,7 +54,7 @@ export const Nav = () => {
               </a>
             </li>
           ))}
-        </ul>
+        </UnorderedList>
       </HStack>
     </nav>
   );

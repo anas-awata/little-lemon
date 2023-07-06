@@ -15,12 +15,14 @@ function About() {
   return (
     <HStack
       justifyContent="space-around"
-      alignItems="flex-start"
+      alignItems={{ base: "center", md: "flex-start" }}
       marginTop="30px"
-      padding="100px"
+      padding={{ base: "30px", md: "100px" }}
+      gap={{ base: "100px", md: "0.5rem" }}
       paddingTop="20px"
-      paddingBottom="200px"
+      paddingBottom={{ base: "100px", md: "200px" }}
       maxWidth={"100%"}
+      flexDirection={{ base: "column", md: "row" }}
     >
       <Box>
         <VStack gap="100px" alignItems="flex-start">
@@ -64,6 +66,7 @@ function About() {
           boxSize="sm"
           borderRadius="10px"
           objectFit="cover"
+          display={{ base: "none", md: "inline" }}
         />
       </div>
     </HStack>
