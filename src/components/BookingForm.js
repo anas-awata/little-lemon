@@ -50,9 +50,9 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
           maxWidth: "200px",
           gap: "20px",
           flexDirection: "column",
-          padding: 40,
           minWidth: "50%",
           alignItems: "flex-start",
+          marginBottom: "50px",
         }}
       >
         <FormControl minWidth="100%">
